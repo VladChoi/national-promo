@@ -1,0 +1,2463 @@
+<style>
+  @font-face {
+    font-family: "SamsungOneCyrillic-400";
+    font-display: swap;
+    src: url("../fonts/SamsungOneCyrillic-400_v1.0.ttf") format("truetype");
+    font-weight: 400; }
+
+  @font-face {
+    font-family: "SamsungOneCyrillic-600";
+    font-display: swap;
+    src: url("../fonts/SamsungOneCyrillic-600_v1.0.ttf") format("truetype");
+    font-weight: 600; }
+
+  @font-face {
+    font-family: "SamsungOneCyrillic-700";
+    font-display: swap;
+    src: url("../fonts/SamsungOneCyrillic-700_v1.0.ttf") format("truetype");
+    font-weight: 700; }
+
+  @font-face {
+    font-family: "SamsungOneCyrillic-800";
+    font-display: swap;
+    src: url("../fonts/SamsungOneCyrillic-800_v1.0.ttf") format("truetype");
+    font-weight: 800; }
+
+  @font-face {
+    font-family: "SamsungSharpSans-Regular";
+    font-display: swap;
+    src: url("../fonts/SamsungSharpSans-Regular.ttf") format("truetype");
+    font-weight: 400; }
+
+  @font-face {
+    font-family: "SamsungSharpSans-Bold";
+    font-display: swap;
+    src: url("../fonts/SamsungSharpSans-Bold.ttf") format("truetype");
+    font-weight: 800; }
+
+  /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+  /* Document
+     ========================================================================== */
+  /**
+   * 1. Correct the line height in all browsers.
+   * 2. Prevent adjustments of font size after orientation changes in iOS.
+   */
+  html {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */ }
+
+  /* Sections
+       ========================================================================== */
+  /**
+     * Remove the margin in all browsers.
+     */
+  body {
+    margin: 0; }
+
+  /**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0; }
+
+  /* Grouping content
+       ========================================================================== */
+  /**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+  hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */ }
+
+  /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+  pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */ }
+
+  /* Text-level semantics
+       ========================================================================== */
+  /**
+     * Remove the gray background on active links in IE 10.
+     */
+  a {
+    background-color: transparent; }
+
+  /**
+     * 1. Remove the bottom border in Chrome 57-
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+  abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */ }
+
+  /**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+  b,
+  strong {
+    font-weight: bolder; }
+
+  /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */ }
+
+  /**
+     * Add the correct font size in all browsers.
+     */
+  small {
+    font-size: 80%; }
+
+  /**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline; }
+
+  sub {
+    bottom: -0.25em; }
+
+  sup {
+    top: -0.5em; }
+
+  /* Embedded content
+       ========================================================================== */
+  /**
+     * Remove the border on images inside links in IE 10.
+     */
+  img {
+    border-style: none; }
+
+  /* Forms
+       ========================================================================== */
+  /**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */ }
+
+  /**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+  button,
+  input {
+    /* 1 */
+    overflow: visible; }
+
+  /**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+  button,
+  select {
+    /* 1 */
+    text-transform: none; }
+
+  /**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button; }
+
+  /**
+     * Remove the inner border and padding in Firefox.
+     */
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0; }
+
+  /**
+     * Restore the focus styles unset by the previous rule.
+     */
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText; }
+
+  /**
+     * Correct the padding in Firefox.
+     */
+  fieldset {
+    padding: 0.35em 0.75em 0.625em; }
+
+  /**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+  legend {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */ }
+
+  /**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+  progress {
+    vertical-align: baseline; }
+
+  /**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+  textarea {
+    overflow: auto; }
+
+  /**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */ }
+
+  /**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto; }
+
+  /**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+  [type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */ }
+
+  /**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+  /**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */ }
+
+  /* Interactive
+       ========================================================================== */
+  /*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+  details {
+    display: block; }
+
+  /*
+     * Add the correct display in all browsers.
+     */
+  summary {
+    display: list-item; }
+
+  /* Misc
+       ========================================================================== */
+  /**
+     * Add the correct display in IE 10+.
+     */
+  template {
+    display: none; }
+
+  /**
+     * Add the correct display in IE 10.
+     */
+  [hidden] {
+    display: none; }
+
+  html {
+    box-sizing: border-box; }
+
+  html, body {
+    height: 100%; }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit; }
+
+  a, a:visited {
+    text-decoration: none; }
+
+  a:hover {
+    text-decoration: none; }
+
+  a:focus, a:active {
+    outline: none; }
+
+  input {
+    outline: none;
+    border: none; }
+
+  button, a {
+    cursor: pointer;
+    outline: none;
+    border: none; }
+
+  textarea {
+    outline: none; }
+
+  ul li {
+    list-style: none; }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0; }
+
+  .main-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto; }
+
+  .section {
+    width: 100%;
+    margin: 0 auto; }
+
+  .img-basic {
+    width: 100%;
+    height: auto;
+    object-fit: contain; }
+
+  .img-buds {
+    max-width: 80%;
+    margin: 0 auto; }
+
+  picture {
+    display: flex;
+    justify-content: center; }
+
+  .sm-btn-basic {
+    width: 180px;
+    font-size: 16px;
+    color: black;
+    padding: 15px 35px;
+    margin: 50px 0;
+    font-family: "SamsungOneCyrillic";
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-size: 300% 100%;
+    background-color: white;
+    border: 2px solid black;
+    /*background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);*/
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
+  .sm-btn-basic:hover {
+    box-shadow: 0 0.6em 0.6em -0.3em #30271f;
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+    /*background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;*/
+    transition: all .2s ease-in-out; }
+  .sm-btn-basic:active {
+    box-shadow: none;
+    font-size: 15px;
+    transition: all .05s ease-in-out; }
+
+  .section-inner {
+    padding: 20px 15px; }
+
+  .legal-text {
+    font-family: "SamsungOneCyrillic";
+    text-align: left;
+    color: #a0a0a0;
+    font-size: 12px;
+    padding: 0 40px 40px; }
+  .legal-text a {
+    color: blue; }
+
+  .block-title {
+    font-family: "SamsungOneCyrillic";
+    font-weight: bold;
+    font-size: calc(24px + 12 * ((100vw - 320px) / 1120));
+    margin-bottom: 30px;
+    text-align: center; }
+
+  .sub-promo, .pre-footer {
+    padding: 20px 0 0;
+    width: 70%; }
+
+  .sub-promo__text, .pre-footer__text {
+    font-family: "SamsungSharpSans";
+    font-size: calc(22px + 8 * ((100vw - 320px) / 1120));
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px; }
+
+  .pre-footer__text {
+    line-height: 50px; }
+  .pre-footer__text span {
+    font-size: calc(32px + 8 * ((100vw - 320px) / 1120)); }
+
+  .pre-footer--list {
+    font-family: "SamsungOneCyrillic";
+    font-size: calc(18px + 6 * ((100vw - 320px) / 1120));
+    margin-bottom: 100px; }
+  .pre-footer--list ul > li:not(li:last-child) {
+    margin-bottom: 15px; }
+  .pre-footer--list ul > li {
+    list-style-type: circle; }
+
+  .img-mob {
+    max-width: 327px; }
+
+  .img-width {
+    width: 100%;
+    max-width: 258px; }
+
+  .img-heads {
+    max-width: 229px; }
+
+  .product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+    margin: 0 auto; }
+
+  .product-name {
+    font-family: "SamsungOneCyrillic";
+    font-weight: bold;
+    text-align: center;
+    line-height: 34px;
+    font-size: calc(19px + 5 * ((100vw - 320px) / 1120));
+    margin: 20px 0; }
+
+  .price-old {
+    position: relative;
+    font-family: "SamsungOneCyrillic";
+    font-size: 20px;
+    color: gray; }
+  .price-old:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: rotate(-12deg);
+    height: 2px;
+    background-color: red;
+    width: 100%; }
+
+  .price-new {
+    color: black;
+    font-family: "SamsungOneCyrillic";
+    font-weight: bold;
+    font-size: 24px; }
+
+  .product-btns {
+    display: flex;
+    align-items: center; }
+
+  .product-notification {
+    margin-left: 10px;
+    font-family: "SamsungOneCyrillic";
+    font-weight: bold;
+    text-align: center; }
+
+  .galaxy-content {
+    padding: 30px 100px; }
+
+  /* GRID starts */
+  .items-display {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: auto;
+    column-gap: 2em;
+    row-gap: 2em;
+    width: 73%;
+    margin: 0 auto; }
+
+  .items-display--1 {
+    grid-template-areas: "item-1 item-2 item-3" "item-4 item-5 item-6" "item-7 item-8 item-9" "item-10 item-11 item-12" "item-13 item-14 item-15";
+    margin-bottom: 25px; }
+
+  .product-item--1 {
+    grid-area: item-1; }
+
+  .product-item--2 {
+    grid-area: item-2; }
+
+  .product-item--3 {
+    grid-area: item-3; }
+
+  .product-item--4 {
+    grid-area: item-4; }
+
+  .product-item--5 {
+    grid-area: item-5; }
+
+  .product-item--6 {
+    grid-area: item-6; }
+
+  .product-item--7 {
+    grid-area: item-7; }
+
+  .product-item--8 {
+    grid-area: item-8; }
+
+  .product-item--9 {
+    grid-area: item-9; }
+
+  .product-item--11 {
+    grid-area: item-10; }
+
+  .product-item--12 {
+    grid-area: item-11; }
+
+  .product-item--13 {
+    grid-area: item-12; }
+
+  .product-item--14 {
+    grid-area: item-13; }
+
+  .product-item--15 {
+    grid-area: item-14; }
+
+  .product-item--16 {
+    grid-area: item-15; }
+
+  .items-display--2 {
+    grid-template-areas: "item-17 item-gta7-4-64 item-18"; }
+
+  .product-item--GTA7-4-64 {
+    grid-area: item-gta7-4-64; }
+
+  .product-item--17 {
+    grid-area: item-17; }
+
+  .product-item--18 {
+    grid-area: item-18; }
+
+  .items-display--3 {
+    grid-template-areas: "item-19"; }
+
+  .product-item--19 {
+    grid-area: item-19; }
+
+  .items-display--4 {
+    grid-template-areas: "item-21 item-22"; }
+
+  .product-item--21 {
+    grid-area: item-21; }
+
+  .product-item--22 {
+    grid-area: item-22; }
+
+  /* GRID ends */
+  @media screen and (max-width: 1400px) {
+    .items-display--1 {
+      grid-template-areas: "item-1 item-2" "item-3 item-4" "item-5 item-6" "item-7 item-8" "item-9 item-10" "item-11 item-12" "item-13 item-14" "item-15 ."; }
+    .items-display--2 {
+      grid-template-areas: "item-17 item-gta7-4-64" "item-18 ."; }
+    .product-item {
+      /*    .img-basic {
+        width: 80%;
+        text-align: center;
+      }*/ }
+    .product-item picture {
+      display: flex;
+      justify-content: center; } }
+
+  @media screen and (max-width: 890px) {
+    .items-display--1 {
+      grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5" "item-6" "item-7" "item-8" "item-9" "item-10" "item-11" "item-12" "item-13" "item-14" "item-15"; }
+    .items-display--2 {
+      grid-template-areas: "item-17" "item-gta7-4-64" "item-18"; }
+    .items-display--4 {
+      grid-template-areas: "item-21" "item-22"; }
+    .galaxy-content {
+      padding: 20px 80px; }
+    .galaxy-content {
+      padding: 20px; } }
+
+  @media screen and (max-width: 415px) {
+    .section-inner {
+      padding: 20px 0; }
+    .product-item {
+      width: 300px; }
+    .product-btns {
+      flex-direction: column;
+      align-items: center; }
+    .sm-btn-basic {
+      margin-bottom: 15px; }
+    .product-notification {
+      text-align: center; }
+    .sub-promo, .pre-footer {
+      width: 90%; } }
+
+  @media screen and (min-width: 1441px) {
+    .product-name {
+      font-size: 24px; }
+    .sub-promo__text, .pre-footer__text {
+      font-size: 30px; }
+    .pre-footer__text span {
+      font-size: 40px; }
+    .pre-footer--list {
+      font-size: 24px; } }
+</style>
+
+<div class="main-container">
+  <div class="section main-promo">
+    <picture>
+      <source media="(min-width: 891px)" srcset="/content/dam/samsung/ua/promotions/national-promo/main-promo-desk.png"/>
+      <source media="(max-width: 890px)" srcset="/content/dam/samsung/ua/promotions/national-promo/main-promo-mob.png"/>
+      <img class="img-basic" src="/content/dam/samsung/ua/promotions/national-promo/main-promo-desk.png" alt="Main promo section image"/>
+    </picture>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="section sub-promo">
+    <p class="sub-promo__text">Купуйте акційний смартфон або планшет Samsung та отримайте у подарунок 6 місяців Київстар ТБ</p>
+  </div>
+</div>
+
+<div class="main container">
+  <div class="section section-inner">
+    <div class="section items-display items-display--1">
+      <div class="product-item product-item--1">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-1.png" alt="Galaxy S21 Ultra | 512 ГБ image">
+
+        <span class="product-name">Galaxy S21 Ultra | 512 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">43 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;39 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode="SM-G998BZKHSEK" data-modelname="SM-G998B/DS" data-title="Galaxy S21 Ultra 5G" data-iacode="01010100"
+          >
+            Де купити
+          </a>
+
+          <!--<span class="product-notification">Обмiн з вигодою до<br>5 000 грн*</span>-->
+        </div>
+      </div>
+
+      <div class="product-item product-item--2">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-2.png" alt="Galaxy S21 Ultra | 256 ГБ image">
+
+        <span class="product-name">Galaxy S21 Ultra | 256 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">39 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;35 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode="SM-G998BZSGSEK" data-modelname="SM-G998B/DS" data-title="Galaxy S21 Ultra 5G" data-iacode="01010100"
+          >
+            Де купити
+          </a>
+
+          <!--<span class="product-notification">Обмiн з вигодою до<br>5 000 грн*</span>-->
+        </div>
+      </div>
+
+      <div class="product-item product-item--3">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-3.png" alt="Galaxy S21 Ultra | 128 ГБ image">
+
+        <span class="product-name">Galaxy S21 Ultra | 128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">37 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;33 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode="SM-G998BZKDSEK" data-modelname="SM-G998B/DS" data-title="Galaxy S21 Ultra 5G" data-iacode="01010100"
+          >
+            Де купити
+          </a>
+
+          <!--<span class="product-notification">Обмiн з вигодою до<br>5 000 грн*</span>-->
+        </div>
+      </div>
+
+      <div class="product-item product-item--4">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-4.png" alt="Galaxy S21+ | 256 ГБ image">
+
+        <span class="product-name">Galaxy S21+ | 256 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">33 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;31 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode="SM-G996BZSGSEK" data-modelname="SM-G996B/DS" data-title="Galaxy S21+ 5G" data-iacode="01010100"
+          >
+            Де купити
+          </a>
+
+          <!--<span class="product-notification">Обмiн з вигодою до<br>4 000 грн*</span>-->
+        </div>
+      </div>
+
+      <div class="product-item product-item--5">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-5.png" alt="Galaxy S21+ | 128 ГБ image">
+
+        <span class="product-name">Galaxy S21+ | 128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">31 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;29 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode="SM-G996BZVDSEK" data-modelname="SM-G996B/DS" data-title="Galaxy S21+ 5G" data-iacode="01010100"
+          >
+            Де купити
+          </a>
+
+          <!--<span class="product-notification">Обмiн з вигодою до<br>4 000 грн*</span>-->
+        </div>
+      </div>
+
+      <div class="product-item product-item--6">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-6.png" alt="Galaxy S21 | 256 ГБ image">
+
+        <span class="product-name">Galaxy S21 | 256 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">28 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;25 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode="SM-G991BZIGSEK" data-modelname="SM-G991B/DS" data-title="Galaxy S21 5G" data-iacode="01010100"
+          >
+            Де купити
+          </a>
+
+          <!--<span class="product-notification">Обмiн з вигодою до<br>3 000 грн*</span>-->
+        </div>
+      </div>
+
+      <div class="product-item product-item--7">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-7.png" alt="Galaxy S21 | 128 ГБ image">
+
+        <span class="product-name">Galaxy S21 | 128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">26 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;23 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode="SM-G991BZWDSEK" data-modelname="SM-G991B/DS" data-title="Galaxy S21 5G" data-iacode="01010100"
+          >
+            Де купити
+          </a>
+
+          <!--<span class="product-notification">Обмiн з вигодою до<br>3 000 грн*</span>-->
+        </div>
+      </div>
+
+      <div class="product-item product-item--8">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-8.png" alt="Galaxy S20 FE | 256 ГБ image">
+
+        <span class="product-name">Galaxy S20 FE | 256 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">19 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;16 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode="SM-G780GZGHSEK" data-modelname="SM-G780G/DS" data-title="Galaxy S20 FE (SM-G780G)" data-iacode="01010100"
+          >
+            Де купити
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item product-item--9">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-9.png" alt="Galaxy S20 FE | 128 ГБ image">
+
+        <span class="product-name">Galaxy S20 FE | 128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">18 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;16 499 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode="SM-G780GLVHSEK" data-modelname="SM-G780G/DS" data-title="Galaxy S20 FE (SM-G780G)" data-iacode="01010100"
+          >
+            Де купити
+          </a>
+        </div>
+      </div>
+
+      <!--<div class="product-item product-item&#45;&#45;10">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-10.png" alt="Galaxy A32 | 4/128 ГБ image">
+
+        <span class="product-name">Galaxy A32 | 4/128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">7 299 грн&nbsp;</span>
+          <span class="price-new">&nbsp;6 899 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-A325FLVGSEK" data-modelname="SM-A325F/DS" data-title="Galaxy A32" data-iacode="01010400"
+        >
+          Де купити
+        </a>
+      </div>-->
+
+      <div class="product-item product-item--11">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-11.png" alt="Galaxy A32 | 4/64 ГБ image">
+
+        <span class="product-name">Galaxy A32 | 4/64 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">7 299 грн&nbsp;</span>
+          <span class="price-new">&nbsp;6 899 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-A325FLVDSEK" data-modelname="SM-A325F/DS" data-title="Galaxy A32" data-iacode="01010400"
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item--12">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-12.png" alt="Galaxy A22 4/128 ГБ image">
+
+        <span class="product-name">Galaxy A22 4/128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">6 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;6 299 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-A225FZWGSEK" data-modelname="SM-A225F/DSN" data-title="Galaxy A22" data-iacode="01010400"
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item--13">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-13.png" alt="Galaxy A22 4/64 ГБ image">
+
+        <span class="product-name">Galaxy A22 4/64 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">6 499 грн&nbsp;</span>
+          <span class="price-new">&nbsp;5 599 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-A225FLGDSEK" data-modelname="SM-A225F/DSN" data-title="Galaxy A22" data-iacode="01010400"
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item--14">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-14.png" alt="Galaxy A12 | 4/64 ГБ image">
+
+        <span class="product-name">Galaxy A12 | 4/64 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">5 499 грн&nbsp;</span>
+          <span class="price-new">&nbsp;4 799 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-A125FZBVSEK" data-modelname="SM-A125F/DSN" data-title="Galaxy A12" data-iacode="01010400"
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item--15">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-15.png" alt="Galaxy A12 | 3/32 ГБ image">
+
+        <span class="product-name">Galaxy A12 | 3/32 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">4 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;4 199 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-A125FZRUSEK" data-modelname="SM-A125F/DSN" data-title="Galaxy A12" data-iacode="01010400"
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item--16">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-16.png" alt="Galaxy A02 | 2/32гб image">
+
+        <span class="product-name">Galaxy A02 | 2/32 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">3 499 грн&nbsp;</span>
+          <span class="price-new">&nbsp;2 999 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-A022GZBBSEK" data-modelname="SM-A022G/DS" data-title="Galaxy A02" data-iacode="01010400"
+        >
+          Де купити
+        </a>
+      </div>
+    </div>
+
+    <div class="section items-display items-display--2">
+      <div class="product-item product-item--GTA7-4-64">
+        <img class="img-basic img-width" src="/content/dam/samsung/ua/promotions/national-promo/item-17-18.png" alt="Galaxy Tab A7 Lite Wi-Fi tablet image">
+
+        <span class="product-name">Galaxy Tab A7 Lite Wi-Fi 4/64</span>
+
+        <div class="product-prices">
+          <span class="price-old">5 299 грн&nbsp;</span>
+          <span class="price-new">&nbsp;4 799 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-T220NZAFSEK" data-modelname="SM-T220" data-title="Galaxy Tab A7 Lite Wi-Fi" data-iacode="01020200"
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item--17">
+        <img class="img-basic img-width" src="/content/dam/samsung/ua/promotions/national-promo/item-17-18.png" alt="Galaxy Tab A7 Lite LTE tablet image">
+
+        <span class="product-name">Galaxy Tab A7 Lite LTE 3/32</span>
+
+        <div class="product-prices">
+          <span class="price-old">5 699 грн&nbsp;</span>
+          <span class="price-new">&nbsp;5 199 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-T225NZAASEK" data-modelname="SM-T225" data-title="Galaxy Tab A7 Lite LTE" data-iacode="01020200"
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item--18">
+        <img class="img-basic img-width" src="/content/dam/samsung/ua/promotions/national-promo/item-17-18.png" alt="Galaxy Tab A7 Lite Wi-Fi tablet image">
+
+        <span class="product-name">Galaxy Tab A7 Lite Wi-Fi 3/32</span>
+
+        <div class="product-prices">
+          <span class="price-old">4 699 грн&nbsp;</span>
+          <span class="price-new">&nbsp;4 199 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-T220NZAASEK" data-modelname="SM-T220" data-title="Galaxy Tab A7 Lite Wi-Fi" data-iacode="01020200"
+        >
+          Де купити
+        </a>
+      </div>
+      <!--      <div class="product-item product-item&#45;&#45;19">
+              <img class="img-basic img-width" src="/content/dam/samsung/ua/promotions/national-promo/item-19-20.png" alt="Galaxy Tab A 8.0 LTE tablet image">
+
+              <span class="product-name">Galaxy Tab A 8.0 LTE</span>
+
+              <div class="product-prices">
+                <span class="price-old">4 999 грн&nbsp;</span>
+                <span class="price-new">&nbsp;4 399 грн</span>
+              </div>
+
+              <a href="javascript:void(0);"
+                 class="sm-btn-basic js-cta-buy"
+                 data-modelcode=""
+                 data-modelname=""
+                 data-title=""
+                 data-iacode=""
+              >
+                Де купити
+              </a>
+            </div>
+
+            <div class="product-item product-item&#45;&#45;20">
+              <img class="img-basic img-width" src="/content/dam/samsung/ua/promotions/national-promo/item-19-20.png" alt="Galaxy Tab A 8.0 Wi-Fi tablet image">
+
+              <span class="product-name">Galaxy Tab A 8.0 Wi-Fi</span>
+
+              <div class="product-prices">
+                <span class="price-old">3 999 грн&nbsp;</span>
+                <span class="price-new">&nbsp;3 499 грн</span>
+              </div>
+
+              <a href="javascript:void(0);"
+                 class="sm-btn-basic js-cta-buy"
+                 data-modelcode=""
+                 data-modelname=""
+                 data-title=""
+                 data-iacode=""
+              >
+                Де купити
+              </a>
+            </div>-->
+    </div>
+
+    <div class="section items-display items-display--3">
+      <div class="product-item product-item--19">
+        <img class="img-basic img-width" src="/content/dam/samsung/ua/promotions/national-promo/item-19-20.png" alt="Galaxy Tab A 8.0 LTE tablet image">
+
+        <span class="product-name">Galaxy Tab A 8.0 LTE</span>
+
+        <div class="product-prices">
+          <span class="price-old">4 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;4 399 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-T295NZKASEK" data-modelname="SM-T295" data-title="Galaxy Tab A (8.0\&quot;, 2019) LTE" data-iacode="01020200"
+        >
+          Де купити
+        </a>
+      </div>
+    </div>
+
+    <div class="section items-display items-display--4">
+      <div class="product-item product-item--21">
+        <img class="img-basic img-heads" src="/content/dam/samsung/ua/promotions/national-promo/item-21.png" alt="Galaxy Buds Pro image">
+
+        <span class="product-name">Galaxy Buds Pro</span>
+
+        <div class="product-prices">
+          <span class="price-old">5 499 грн&nbsp;</span>
+          <span class="price-new">&nbsp;4 999 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-R175NZBASEK" data-modelname="SM-R175" data-title="Galaxy Buds+(SM-R175)" data-iacode="01040100"
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item--22">
+        <img class="img-basic img-heads" src="/content/dam/samsung/ua/promotions/national-promo/item-22.png" alt="Galaxy Buds+ image">
+
+        <span class="product-name">Galaxy Buds+</span>
+
+        <div class="product-prices">
+          <span class="price-old">3 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;3 333 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-R190NZSASEK" data-modelname="SM-R190" data-title="Galaxy Buds Pro" data-iacode="01040100"
+        >
+          Де купити
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="section pre-footer">
+    <p class="pre-footer__text">
+      Щоб активувати<br>
+      <span>«6 місяців Київстар ТБ у подарунок»</span><br>
+      користувачу необхідно:
+    </p>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="section pre-footer pre-footer--list">
+    <ul>
+      <li>
+        Придбати акційний смартфон або планшет Samsung.
+      </li>
+      <li>
+        <a href="https://play.google.com/store/apps/details?id=com.kyivstar.tv.mobile" target="_blank" style="color: blue; text-decoration: underline">Встановити</a> додаток Київстар ТБ з магазину додатків на смартфон або планшет Samsung.
+      </li>
+      <li>
+        Прийняти у додатку спеціальну пропозицію та погодитися з її умовами.
+      </li>
+      <li>
+        Авторизуватися за власним номером телефону та ввести пароль, що надійде в SMS.
+      </li>
+      <li>
+        Підтвердити активацію промодоступу.
+      </li>
+      <li>
+        Приємного перегляду!
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="section legal-text">
+    <p>
+      Акційна пропозиція дійсна з 14.09.2021 р. по 31.10.2021 р. в магазинах партнерів на території України, крім зони проведення ООС та тимчасово окупованих територій, та розповсюджується на обрані моделі мобільних пристроїв Samsung, імпортовані ТОВ «Самсунг Електронікс Україна Компані».
+      Протягом акційного періоду смартфон Galaxy S21 Ultra (512 ГБ) пропонується за ціною 39 999 грн замість 43 999 грн, Galaxy S21 Ultra (256 ГБ) — за ціною 35 999 грн замість 39 999, Galaxy S21 Ultra (128 ГБ) — 33 999 грн замість 37 999 грн, Galaxy S21+ (256 ГБ) — за ціною 31 999 грн замість 33 999 грн, Galaxy S21+ (128 ГБ) — за ціною 29 999 грн замість 31 999 грн, Galaxy S21 (256 ГБ) — за ціною 25 999 грн замість 28 999 грн, Galaxy S21 (128 ГБ) — за ціною 23 999 грн замість 26 999 грн, Galaxy S20 FE (256 ГБ) — за ціною 16 999 грн замість 19 999 грн, Galaxy S20 FE (128 ГБ) — 16 499 грн замість 18 999 грн, Galaxy А32 (4/64 ГБ) — за ціною 6 899 грн замість 7 299 грн, Galaxy А22 (4/128 ГБ) — за ціною 6 299 грн замість 6 999 грн, Galaxy А22 (3/64 ГБ) — за ціною 5 599 грн замість 6 499 грн, Galaxy А12 (4/64 ГБ) — за ціною 4 799 грн замість 5 499 грн, Galaxy А12 (4/64 ГБ) — за ціною 4 799 грн замість 5 499 грн, Galaxy А12 (3/32 ГБ) — за ціною 4 199 грн замість 4 999 грн, Galaxy А02 (2/32 ГБ) — за ціною 2 999 грн замість 3 499 грн, Galaxy Tab A 8.0 LTE — за ціною 4 399 грн замість 4 999 грн, Galaxy Tab A7 Lite LTE (3/32) — за ціною 5 199 грн замість 5 699 грн, Galaxy Tab A7 Lite Wi-Fi (4/64) — за ціною 4 799 грн, замість 5 299 грн, Galaxy Tab A7 Lite Wi-Fi (3/32) — за ціною 4 199 грн замість 4 699 грн, Galaxy Buds+ — за ціною 3 333 грн замість 3 999 грн, Galaxy Buds Pro — за ціною 4 999 грн замість 5 499 грн. Учасником акції може стати будь-яка фізична особа, яка є абонентом послуг рухомого зв’язку будь-якого оператора мобільного зв’язку України, та яка придбала акційний мобільний пристрій Samsung. Під твердженням «6 місяців Київстар ТБ у подарунок» мається на увазі можливість отримати вільний ознайомчий доступ для користування всім контентом відеотеки у рамках послуги «Київстар ТБ» протягом шести місяців з моменту активації промодоступу. Активація доступу можлива протягом акційного періоду. Після закінчення ознайомчого доступу користувач, що є абонентом Київстар, буде автоматично переведений на стандартні умови надання послуги «Київстар ТБ» за пакетом «Сімейний» з платою за послугу 150 грн/місяць, яка буде стягуватися з мобільного рахунку абонента Київстар.
+      Для користувачів-абонентів інших мобільних операторів послуга автоматично відключається.
+      Детальна інформація про умови або зміни умов пропозиції, перелік магазинів, акційних смартфонів наявна у продавців магазинів партнерів, в Інтернеті за посиланням: <a href="https://www.samsung.com/ua" target="_blank">www.samsung.com/ua</a> або за номером <a href="tel:0800300466" target="_blank">0&nbsp;800&nbsp;300&nbsp;466</a> (безкоштовно з номерів усіх телеком-операторів України).
+      Відповідальність за підключення послуги та її надання протягом періоду ознайомчого доступу несе ТОВ «Плюс ТБ».
+      Замовник Акції: ТОВ «Плюс ТБ», код ЄДРПОУ 42642803, місцезнаходження: 04107, м. Київ, вул. Половецька, 3/42. Організатори Акції: ТОВ «Самсунг Електронікс Україна Компані», код ЄДРПОУ 36048094, 01032, м. Київ, вул. Льва Толстого, 57, ПрАТ «Київстар», №458 у реєстрі операторів, провайдерів телекомунікацій, 03113, м. Київ, вул. Дегтярівська, 53.
+    </p>
+  </div>
+</div>
+
+// версия с item-20
+<!--
+<style>
+  @font-face {
+    font-family: "SamsungOneCyrillic-400";
+    font-display: swap;
+    src: url("../fonts/SamsungOneCyrillic-400_v1.0.ttf") format("truetype");
+    font-weight: 400; }
+
+  @font-face {
+    font-family: "SamsungOneCyrillic-600";
+    font-display: swap;
+    src: url("../fonts/SamsungOneCyrillic-600_v1.0.ttf") format("truetype");
+    font-weight: 600; }
+
+  @font-face {
+    font-family: "SamsungOneCyrillic-700";
+    font-display: swap;
+    src: url("../fonts/SamsungOneCyrillic-700_v1.0.ttf") format("truetype");
+    font-weight: 700; }
+
+  @font-face {
+    font-family: "SamsungOneCyrillic-800";
+    font-display: swap;
+    src: url("../fonts/SamsungOneCyrillic-800_v1.0.ttf") format("truetype");
+    font-weight: 800; }
+
+  @font-face {
+    font-family: "SamsungSharpSans-Regular";
+    font-display: swap;
+    src: url("../fonts/SamsungSharpSans-Regular.ttf") format("truetype");
+    font-weight: 400; }
+
+  @font-face {
+    font-family: "SamsungSharpSans-Bold";
+    font-display: swap;
+    src: url("../fonts/SamsungSharpSans-Bold.ttf") format("truetype");
+    font-weight: 800; }
+
+  /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+  /* Document
+     ========================================================================== */
+  /**
+   * 1. Correct the line height in all browsers.
+   * 2. Prevent adjustments of font size after orientation changes in iOS.
+   */
+  html {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */ }
+
+  /* Sections
+       ========================================================================== */
+  /**
+     * Remove the margin in all browsers.
+     */
+  body {
+    margin: 0; }
+
+  /**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0; }
+
+  /* Grouping content
+       ========================================================================== */
+  /**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+  hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */ }
+
+  /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+  pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */ }
+
+  /* Text-level semantics
+       ========================================================================== */
+  /**
+     * Remove the gray background on active links in IE 10.
+     */
+  a {
+    background-color: transparent; }
+
+  /**
+     * 1. Remove the bottom border in Chrome 57-
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+  abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */ }
+
+  /**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+  b,
+  strong {
+    font-weight: bolder; }
+
+  /**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */ }
+
+  /**
+     * Add the correct font size in all browsers.
+     */
+  small {
+    font-size: 80%; }
+
+  /**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline; }
+
+  sub {
+    bottom: -0.25em; }
+
+  sup {
+    top: -0.5em; }
+
+  /* Embedded content
+       ========================================================================== */
+  /**
+     * Remove the border on images inside links in IE 10.
+     */
+  img {
+    border-style: none; }
+
+  /* Forms
+       ========================================================================== */
+  /**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */ }
+
+  /**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+  button,
+  input {
+    /* 1 */
+    overflow: visible; }
+
+  /**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+  button,
+  select {
+    /* 1 */
+    text-transform: none; }
+
+  /**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button; }
+
+  /**
+     * Remove the inner border and padding in Firefox.
+     */
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0; }
+
+  /**
+     * Restore the focus styles unset by the previous rule.
+     */
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText; }
+
+  /**
+     * Correct the padding in Firefox.
+     */
+  fieldset {
+    padding: 0.35em 0.75em 0.625em; }
+
+  /**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+  legend {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */ }
+
+  /**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+  progress {
+    vertical-align: baseline; }
+
+  /**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+  textarea {
+    overflow: auto; }
+
+  /**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */ }
+
+  /**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto; }
+
+  /**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+  [type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */ }
+
+  /**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+  /**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */ }
+
+  /* Interactive
+       ========================================================================== */
+  /*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+  details {
+    display: block; }
+
+  /*
+     * Add the correct display in all browsers.
+     */
+  summary {
+    display: list-item; }
+
+  /* Misc
+       ========================================================================== */
+  /**
+     * Add the correct display in IE 10+.
+     */
+  template {
+    display: none; }
+
+  /**
+     * Add the correct display in IE 10.
+     */
+  [hidden] {
+    display: none; }
+
+  html {
+    box-sizing: border-box; }
+
+  html, body {
+    height: 100%; }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit; }
+
+  a, a:visited {
+    text-decoration: none; }
+
+  a:hover {
+    text-decoration: none; }
+
+  a:focus, a:active {
+    outline: none; }
+
+  input {
+    outline: none;
+    border: none; }
+
+  button, a {
+    cursor: pointer;
+    outline: none;
+    border: none; }
+
+  textarea {
+    outline: none; }
+
+  ul li {
+    list-style: none; }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0; }
+
+  .main-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto; }
+
+  .section {
+    width: 100%;
+    margin: 0 auto; }
+
+  .img-basic {
+    width: 100%;
+    height: auto;
+    object-fit: contain; }
+
+  .img-buds {
+    max-width: 80%;
+    margin: 0 auto; }
+
+  picture {
+    display: flex;
+    justify-content: center; }
+
+  .sm-btn-basic {
+    width: 180px;
+    font-size: 16px;
+    color: black;
+    padding: 15px 35px;
+    margin: 50px 0;
+    font-family: "SamsungOneCyrillic";
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-size: 300% 100%;
+    background-color: white;
+    border: 2px solid black;
+    /*background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);*/
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
+  .sm-btn-basic:hover {
+    box-shadow: 0 0.6em 0.6em -0.3em #30271f;
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+    /*background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;*/
+    transition: all .2s ease-in-out; }
+  .sm-btn-basic:active {
+    box-shadow: none;
+    font-size: 15px;
+    transition: all .05s ease-in-out; }
+
+  .section-inner {
+    padding: 100px 15px; }
+
+  .legal-text {
+    font-family: "SamsungOneCyrillic";
+    text-align: left;
+    color: #a0a0a0;
+    font-size: 12px;
+    padding: 0 40px 40px; }
+  .legal-text a {
+    color: blue; }
+
+  .block-title {
+    font-family: "SamsungOneCyrillic";
+    font-weight: bold;
+    font-size: calc(24px + 12 * ((100vw - 320px) / 1120));
+    margin-bottom: 30px;
+    text-align: center; }
+
+  .sub-promo, .pre-footer {
+    padding: 50px 0 0;
+    width: 70%; }
+
+  .sub-promo__text, .pre-footer__text {
+    font-family: "SamsungSharpSans";
+    font-size: calc(22px + 8 * ((100vw - 320px) / 1120));
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px; }
+
+  .pre-footer__text {
+    line-height: 50px; }
+  .pre-footer__text span {
+    font-size: calc(32px + 8 * ((100vw - 320px) / 1120)); }
+
+  .pre-footer&#45;&#45;list {
+    font-family: "SamsungOneCyrillic";
+    font-size: calc(18px + 6 * ((100vw - 320px) / 1120));
+    margin-bottom: 100px; }
+  .pre-footer&#45;&#45;list ul > li:not(li:last-child) {
+    margin-bottom: 15px; }
+  .pre-footer&#45;&#45;list ul > li {
+    list-style-type: circle; }
+
+  .img-mob {
+    max-width: 327px; }
+
+  .img-width {
+    width: 100%;
+    max-width: 258px; }
+
+  .img-heads {
+    max-width: 229px; }
+
+  .product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+    margin: 0 auto; }
+
+  .product-name {
+    font-family: "SamsungOneCyrillic";
+    font-weight: bold;
+    text-align: center;
+    line-height: 34px;
+    font-size: calc(19px + 5 * ((100vw - 320px) / 1120));
+    margin: 20px 0; }
+
+  .price-old {
+    position: relative;
+    font-family: "SamsungOneCyrillic";
+    font-size: 20px;
+    color: gray; }
+  .price-old:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    transform: rotate(-12deg);
+    height: 2px;
+    background-color: red;
+    width: 100%; }
+
+  .price-new {
+    color: black;
+    font-family: "SamsungOneCyrillic";
+    font-weight: bold;
+    font-size: 24px; }
+
+  .product-btns {
+    display: flex;
+    align-items: center; }
+
+  .product-notification {
+    margin-left: 10px;
+    font-family: "SamsungOneCyrillic";
+    font-weight: bold;
+    text-align: center; }
+
+  .galaxy-content {
+    padding: 30px 100px; }
+
+  /* GRID starts */
+  .items-display {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: auto;
+    column-gap: 2em;
+    row-gap: 2em;
+    width: 73%;
+    margin: 0 auto; }
+
+  .items-display&#45;&#45;1 {
+    grid-template-areas: "item-1 item-2 item-3" "item-4 item-5 item-6" "item-7 item-8 item-9" "item-10 item-11 item-12" "item-13 item-14 item-15" ". item-16 .";
+    margin-bottom: 25px; }
+
+  .product-item&#45;&#45;1 {
+    grid-area: item-1; }
+
+  .product-item&#45;&#45;2 {
+    grid-area: item-2; }
+
+  .product-item&#45;&#45;3 {
+    grid-area: item-3; }
+
+  .product-item&#45;&#45;4 {
+    grid-area: item-4; }
+
+  .product-item&#45;&#45;5 {
+    grid-area: item-5; }
+
+  .product-item&#45;&#45;6 {
+    grid-area: item-6; }
+
+  .product-item&#45;&#45;7 {
+    grid-area: item-7; }
+
+  .product-item&#45;&#45;8 {
+    grid-area: item-8; }
+
+  .product-item&#45;&#45;9 {
+    grid-area: item-9; }
+
+  .product-item&#45;&#45;10 {
+    grid-area: item-10; }
+
+  .product-item&#45;&#45;11 {
+    grid-area: item-11; }
+
+  .product-item&#45;&#45;12 {
+    grid-area: item-12; }
+
+  .product-item&#45;&#45;13 {
+    grid-area: item-13; }
+
+  .product-item&#45;&#45;14 {
+    grid-area: item-14; }
+
+  .product-item&#45;&#45;15 {
+    grid-area: item-15; }
+
+  .product-item&#45;&#45;16 {
+    grid-area: item-16; }
+
+  .items-display&#45;&#45;2 {
+    grid-template-areas: "item-17 item-18" "item-19 item-20" "item-21 item-22"; }
+
+  .product-item&#45;&#45;17 {
+    grid-area: item-17; }
+
+  .product-item&#45;&#45;18 {
+    grid-area: item-18; }
+
+  .product-item&#45;&#45;19 {
+    grid-area: item-19; }
+
+  .product-item&#45;&#45;20 {
+    grid-area: item-20; }
+
+  .product-item&#45;&#45;21 {
+    grid-area: item-21; }
+
+  .product-item&#45;&#45;22 {
+    grid-area: item-22; }
+
+  /* GRID ends */
+  @media screen and (max-width: 1400px) {
+    .items-display&#45;&#45;1 {
+      grid-template-areas: "item-1 item-2" "item-3 item-4" "item-5 item-6" "item-7 item-8" "item-9 item-10" "item-11 item-12" "item-13 item-14" "item-15 item-16"; }
+    .product-item {
+      /*    .img-basic {
+        width: 80%;
+        text-align: center;
+      }*/ }
+    .product-item picture {
+      display: flex;
+      justify-content: center; } }
+
+  @media screen and (max-width: 890px) {
+    .items-display&#45;&#45;1 {
+      grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5" "item-6" "item-7" "item-8" "item-9" "item-10" "item-11" "item-12" "item-13" "item-14" "item-15" "item-16"; }
+    .items-display&#45;&#45;2 {
+      grid-template-areas: "item-17" "item-18" "item-19" "item-20" "item-21" "item-22"; }
+    .galaxy-content {
+      padding: 20px 80px; }
+    .galaxy-content {
+      padding: 20px; } }
+
+  @media screen and (max-width: 415px) {
+    .section-inner {
+      padding: 60px 0; }
+    .product-item {
+      width: 300px; }
+    .product-btns {
+      flex-direction: column;
+      align-items: center; }
+    .sm-btn-basic {
+      margin-bottom: 15px; }
+    .product-notification {
+      text-align: center; }
+    .sub-promo, .pre-footer {
+      width: 90%; } }
+
+  @media screen and (min-width: 1441px) {
+    .product-name {
+      font-size: 24px; }
+    .sub-promo__text, .pre-footer__text {
+      font-size: 30px; }
+    .pre-footer__text span {
+      font-size: 40px; }
+    .pre-footer&#45;&#45;list {
+      font-size: 24px; } }
+</style>
+
+<div class="main-container">
+  <div class="section main-promo">
+    <picture>
+      <source media="(min-width: 891px)" srcset="/content/dam/samsung/ua/promotions/national-promo/main-promo-desk.png"/>
+      <source media="(max-width: 890px)" srcset="/content/dam/samsung/ua/promotions/national-promo/main-promo-mob.png"/>
+      <img class="img-basic" src="/content/dam/samsung/ua/promotions/national-promo/main-promo-desk.png" alt="Main promo section image"/>
+    </picture>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="section sub-promo">
+    <p class="sub-promo__text">Купуйте акційний смартфон або планшет Samsung та отримайте у подарунок 6 місяців Київстар ТБ</p>
+  </div>
+</div>
+
+<div class="main container">
+  <div class="section section-inner">
+    <div class="section items-display items-display&#45;&#45;1">
+      <div class="product-item product-item&#45;&#45;1">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-1.png" alt="Galaxy S21 Ultra | 512 ГБ image">
+
+        <span class="product-name">Galaxy S21 Ultra | 512 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">43 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;38 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode=""
+             data-modelname="S"
+             data-title=""
+             data-iacode=""
+          >
+            Де купити
+          </a>
+
+          <span class="product-notification">Обмiн з вигодою до<br>5 000 грн*</span>
+        </div>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;2">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-2.png" alt="Galaxy S21 Ultra | 256 ГБ image">
+
+        <span class="product-name">Galaxy S21 Ultra | 256 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">39 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;34 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode=""
+             data-modelname="S"
+             data-title=""
+             data-iacode=""
+          >
+            Де купити
+          </a>
+
+          <span class="product-notification">Обмiн з вигодою до<br>5 000 грн*</span>
+        </div>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;3">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-3.png" alt="Galaxy S21 Ultra | 128 ГБ image">
+
+        <span class="product-name">Galaxy S21 Ultra | 128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">37 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;32 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode=""
+             data-modelname=""
+             data-title=""
+             data-iacode=""
+          >
+            Де купити
+          </a>
+
+          <span class="product-notification">Обмiн з вигодою до<br>5 000 грн*</span>
+        </div>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;4">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-4.png" alt="Galaxy S21+ | 256 ГБ image">
+
+        <span class="product-name">Galaxy S21+ | 256 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">33 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;29 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode=""
+             data-modelname=""
+             data-title=""
+             data-iacode=""
+          >
+            Де купити
+          </a>
+
+          <span class="product-notification">Обмiн з вигодою до<br>4 000 грн*</span>
+        </div>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;5">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-5.png" alt="Galaxy S21+ | 128 ГБ image">
+
+        <span class="product-name">Galaxy S21+ | 128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">31 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;27 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode=""
+             data-modelname=""
+             data-title=""
+             data-iacode=""
+          >
+            Де купити
+          </a>
+
+          <span class="product-notification">Обмiн з вигодою до<br>4 000 грн*</span>
+        </div>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;6">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-6.png" alt="Galaxy S21 | 256 ГБ image">
+
+        <span class="product-name">Galaxy S21 | 256 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">28 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;25 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode=""
+             data-modelname=""
+             data-title=""
+             data-iacode=""
+          >
+            Де купити
+          </a>
+
+          <span class="product-notification">Обмiн з вигодою до<br>3 000 грн*</span>
+        </div>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;7">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-7.png" alt="Galaxy S21 | 128 ГБ image">
+
+        <span class="product-name">Galaxy S21 | 128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">26 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;23 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode=""
+             data-modelname=""
+             data-title=""
+             data-iacode=""
+          >
+            Де купити
+          </a>
+
+          <span class="product-notification">Обмiн з вигодою до<br>3 000 грн*</span>
+        </div>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;8">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-8.png" alt="Galaxy S20 FE | 256 ГБ image">
+
+        <span class="product-name">Galaxy S20 FE | 256 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">19 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;17 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode=""
+             data-modelname=""
+             data-title=""
+             data-iacode=""
+          >
+            Де купити
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;9">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-9.png" alt="Galaxy S20 FE | 128 ГБ image">
+
+        <span class="product-name">Galaxy S20 FE | 128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">18 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;16 999 грн</span>
+        </div>
+
+        <div class="product-btns">
+          <a href="javascript:void(0);"
+             class="sm-btn-basic js-cta-buy"
+             data-modelcode=""
+             data-modelname=""
+             data-title=""
+             data-iacode=""
+          >
+            Де купити
+          </a>
+        </div>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;10">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-10.png" alt="Galaxy A32 | 4/128 ГБ image">
+
+        <span class="product-name">Galaxy A32 | 4/128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">7 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;7 499 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;11">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-11.png" alt="Galaxy A32 | 4/64 ГБ image">
+
+        <span class="product-name">Galaxy A32 | 4/64 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">7 299 грн&nbsp;</span>
+          <span class="price-new">&nbsp;6 899 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode="SM-N980FZAGSEK"
+           data-modelname="SM-N980F/DS"
+           data-title="Galaxy Note20"
+           data-iacode="01010200"
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;12">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-12.png" alt="Galaxy A22 4/128 ГБ image">
+
+        <span class="product-name">Galaxy A22 4/128 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">6 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;6 499 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;13">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-13.png" alt="Galaxy A22 4/64 ГБ image">
+
+        <span class="product-name">Galaxy A22 4/64 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">6 499 грн&nbsp;</span>
+          <span class="price-new">&nbsp;5 799 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;14">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-14.png" alt="Galaxy A12 | 4/64 ГБ image">
+
+        <span class="product-name">Galaxy A12 | 4/64 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">5 499 грн&nbsp;</span>
+          <span class="price-new">&nbsp;4 999 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;15">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-15.png" alt="Galaxy A12 | 3/32 ГБ image">
+
+        <span class="product-name">Galaxy A12 | 3/32 ГБ</span>
+
+        <div class="product-prices">
+          <span class="price-old">4 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;4 299 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;16">
+        <img class="img-basic img-mob" src="/content/dam/samsung/ua/promotions/national-promo/item-16.png" alt="Galaxy A02 | 2/32гб image">
+
+        <span class="product-name">Galaxy A02 | 2/32гб</span>
+
+        <div class="product-prices">
+          <span class="price-old">3 499 грн&nbsp;</span>
+          <span class="price-new">&nbsp;2 999 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+    </div>
+
+    <div class="section items-display items-display&#45;&#45;2">
+      <div class="product-item product-item&#45;&#45;17">
+        <img class="img-basic img-width" src="/content/dam/samsung/ua/promotions/national-promo/item-17-18.png" alt="Galaxy Tab A7 Lite LTE tablet image">
+
+        <span class="product-name">Galaxy Tab A7 Lite LTE</span>
+
+        <div class="product-prices">
+          <span class="price-old">7 499 грн&nbsp;</span>
+          <span class="price-new">&nbsp;6 666 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;18">
+        <img class="img-basic img-width" src="/content/dam/samsung/ua/promotions/national-promo/item-17-18.png" alt="Galaxy Tab A7 Lite Wi-Fi tablet image">
+
+        <span class="product-name">Galaxy Tab A7 Lite Wi-Fi</span>
+
+        <div class="product-prices">
+          <span class="price-old">6 699 грн&nbsp;</span>
+          <span class="price-new">&nbsp;5 999 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;19">
+        <img class="img-basic img-width" src="/content/dam/samsung/ua/promotions/national-promo/item-19-20.png" alt="Galaxy Tab A 8.0 LTE tablet image">
+
+        <span class="product-name">Galaxy Tab A 8.0 LTE</span>
+
+        <div class="product-prices">
+          <span class="price-old">4 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;4 399 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;20">
+        <img class="img-basic img-width" src="/content/dam/samsung/ua/promotions/national-promo/item-19-20.png" alt="Galaxy Tab A 8.0 Wi-Fi tablet image">
+
+        <span class="product-name">Galaxy Tab A 8.0 Wi-Fi</span>
+
+        <div class="product-prices">
+          <span class="price-old">3 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;3 499 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;21">
+        <img class="img-basic img-heads" src="/content/dam/samsung/ua/promotions/national-promo/item-21.png" alt="Galaxy Buds Pro image">
+
+        <span class="product-name">Galaxy Buds Pro</span>
+
+        <div class="product-prices">
+          <span class="price-old">5 499 грн&nbsp;</span>
+          <span class="price-new">&nbsp;4 799 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+
+      <div class="product-item product-item&#45;&#45;22">
+        <img class="img-basic img-heads" src="/content/dam/samsung/ua/promotions/national-promo/item-22.png" alt="Galaxy Buds+ image">
+
+        <span class="product-name">Galaxy Buds+</span>
+
+        <div class="product-prices">
+          <span class="price-old">3 999 грн&nbsp;</span>
+          <span class="price-new">&nbsp;3 333 грн</span>
+        </div>
+
+        <a href="javascript:void(0);"
+           class="sm-btn-basic js-cta-buy"
+           data-modelcode=""
+           data-modelname=""
+           data-title=""
+           data-iacode=""
+        >
+          Де купити
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="section pre-footer">
+    <p class="pre-footer__text">
+      Щоб активувати<br>
+      <span>«6 місяців Київстар ТБ у подарунок»</span><br>
+      користувачу необхідно:
+    </p>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="section pre-footer pre-footer&#45;&#45;list">
+    <ul>
+      <li>
+        Придбати акційний смартфон або планшет Samsung.
+      </li>
+      <li>
+        Встановити додаток Київстар ТБ з магазину додатків на смартфон або планшет Samsung.
+      </li>
+      <li>
+        Прийняти у додатку спеціальну пропозицію та погодитися з її умовами.
+      </li>
+      <li>
+        Авторизуватися за власним номером телефону та ввести пароль, що надійде в SMS.
+      </li>
+      <li>
+        Підтвердити активацію промо-доступу.
+      </li>
+      <li>
+        Приємного перегляду!
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="main-container">
+  <div class="section legal-text">
+    <p>
+      Акційна пропозиція дійсна з 14.09.2021 р. по 31.10.2021 р. в магазинах партнерів на території України, крім зони проведення ООС та тимчасово окупованих територій, та розповсюджується на обрані моделі мобільних пристроїв Samsung, імпортовані ТОВ «Самсунг Електронікс Україна Компані».
+      Протягом акційного періоду смартфон Galaxy S21 Ultra (512 ГБ) пропонується за ціною 39 999 грн замість 43 999 грн, Galaxy S21 Ultra (256 ГБ) — за ціною 35 999 грн замість 39 999, Galaxy S21 Ultra (128 ГБ) — 33 999 грн замість 37 999 грн, Galaxy S21+ (256 ГБ) — за ціною 31 999 грн замість 33 999 грн, Galaxy S21+ (128 ГБ) — за ціною 29 999 грн замість 31 999 грн, Galaxy S21 (256 ГБ) — за ціною 25 999 грн замість 28 999 грн, Galaxy S21 (128 ГБ) — за ціною 23 999 грн замість 26 999 грн, Galaxy S20 FE (256 ГБ) — за ціною 16 999 грн замість 19 999 грн, Galaxy S20 FE (128 ГБ) — 16 499 грн замість 18 999 грн, Galaxy А32 (4/64 ГБ) — за ціною 6 899 грн замість 7 299 грн, Galaxy А22 (4/128 ГБ) — за ціною 6 299 грн замість 6 999 грн, Galaxy А22 (3/64 ГБ) — за ціною 5 599 грн замість 6 499 грн, Galaxy А12 (4/64 ГБ) — за ціною 4 799 грн замість 5 499 грн, Galaxy А12 (4/64 ГБ) — за ціною 4 799 грн замість 5 499 грн, Galaxy А12 (3/32 ГБ) — за ціною 4 199 грн замість 4 999 грн, Galaxy А02 (2/32 ГБ) — за ціною 2 999 грн замість 3 499 грн, Galaxy Tab A 8.0 LTE — за ціною 4 399 грн замість 4 999 грн, Galaxy Tab A7 Lite LTE (3/32) — за ціною 5 199 грн замість 5 699 грн, Galaxy Tab A7 Lite Wi-Fi (4/64) — за ціною 4 799 грн, замість 5 299 грн, Galaxy Tab A7 Lite Wi-Fi (3/32) — за ціною 4 199 грн замість 4 699 грн, Galaxy Buds+ — за ціною 3 333 грн замість 3 999 грн, Galaxy Buds Pro — за ціною 4 999 грн замість 5 499 грн. Учасником акції може стати будь-яка фізична особа, яка є абонентом послуг рухомого зв’язку будь-якого оператора мобільного зв’язку України, та яка придбала акційний мобільний пристрій Samsung. Під твердженням «6 місяців Київстар ТБ у подарунок» мається на увазі можливість отримати вільний ознайомчий доступ для користування всім контентом відеотеки у рамках послуги «Київстар ТБ» протягом шести місяців з моменту активації промодоступу. Активація доступу можлива протягом акційного періоду. Після закінчення ознайомчого доступу користувач, що є абонентом Київстар, буде автоматично переведений на стандартні умови надання послуги «Київстар ТБ» за пакетом «Сімейний» з платою за послугу 150 грн/місяць, яка буде стягуватися з мобільного рахунку абонента Київстар.
+      Для користувачів-абонентів інших мобільних операторів послуга автоматично відключається.
+      Детальна інформація про умови або зміни умов пропозиції, перелік магазинів, акційних смартфонів наявна у продавців магазинів партнерів, в Інтернеті за посиланням: <a href="https://www.samsung.com/ua" target="_blank">www.samsung.com/ua</a> або за номером <a href="tel:0800300466" target="_blank">0&nbsp;800&nbsp;300&nbsp;466</a> (безкоштовно з номерів усіх телеком-операторів України).
+      Відповідальність за підключення послуги та її надання протягом періоду ознайомчого доступу несе ТОВ «Плюс ТБ».
+      Замовник Акції: ТОВ «Плюс ТБ», код ЄДРПОУ 42642803, місцезнаходження: 04107, м. Київ, вул. Половецька, 3/42. Організатори Акції: ТОВ «Самсунг Електронікс Україна Компані», код ЄДРПОУ 36048094, 01032, м. Київ, вул. Льва Толстого, 57, ПрАТ «Київстар», №458 у реєстрі операторів, провайдерів телекомунікацій, 03113, м. Київ, вул. Дегтярівська, 53.
+    </p>
+  </div>
+</div>-->
